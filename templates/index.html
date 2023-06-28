@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Retention Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 200px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee Retention Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="satisfaction_level">Satisfaction Level:</label>
+        <input type="text" name="satisfaction_level" id="satisfaction_level"><br>
+
+        <label for="last_evaluation">Last Evaluation:</label>
+        <input type="text" name="last_evaluation" id="last_evaluation"><br>
+
+        <label for="time_spend_company">Time Spent in Company (Years):</label>
+        <input type="text" name="time_spend_company" id="time_spend_company"><br>
+
+        <label for="work_accident">Work Accident (1: Yes, 0: No):</label>
+        <input type="text" name="work_accident" id="work_accident"><br>
+
+        <label for="department_RandD">Department_R&amp;D (1: Yes, 0: No):</label>
+        <input type="text" name="department_RandD" id="department_RandD"><br>
+
+        <label for="department_hr">Department_HR (1: Yes, 0: No):</label>
+        <input type="text" name="department_hr" id="department_hr"><br>
+
+        <label for="department_management">Department_Management (1: Yes, 0: No):</label>
+        <input type="text" name="department_management" id="department_management"><br>
+
+        <label for="salary_high">Salary_high (1: Yes, 0: No):</label>
+        <input type="text" name="salary_high" id="salary_high"><br>
+
+        <input type="submit" value="Predict Retention Status">
+    </form>
+</body>
+</html>
